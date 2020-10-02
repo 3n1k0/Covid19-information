@@ -49,10 +49,11 @@ p {
 .card-body {
   display: grid;
   justify-content: center;
+  padding: 0 20px 0 20px;
 }
 
 .card {
-  height: 400px;
+  height: 450px;
   display: grid;
 }
 
@@ -68,4 +69,23 @@ p {
 .navbar-light .navbar-toggler {
   background: white;
   border-color: white;
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+  color: white;
+}
+
+.navbar-light .navbar-nav .nav-link:visited {
+  color: white;
+}
+
+button {
+  max-height: 40px;
+  width: 200px;
+  margin: 0 auto;
+}
+
+h1 {
+  text-align: center;
+  font-size: 4em;
 }

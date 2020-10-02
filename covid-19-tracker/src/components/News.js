@@ -28,10 +28,6 @@ const NewsContainer = styled.div`
 const MainContainer = styled.div`
   width: 100%;
   padding-top: 50px;
-  h1 {
-    text-align: center;
-    font-size: 4em;
-  }
 `;
 
 const Keppotlo = styled.div`
