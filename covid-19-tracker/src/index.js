@@ -1,10 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import "./index.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import Navigation from "./components/Navigation.js";
+import News from "./components/News";
 
 ReactDOM.render(
   <React.StrictMode>
-    <h1>Hello</h1>
+    <Navigation />
+    <News />
   </React.StrictMode>,
   document.getElementById("root")
 );

@@ -1,0 +1,40 @@
+body {
+  box-sizing: border-box;
+  font-family: "Raleway";
+  text-decoration: none;
+  color: papayawhip;
+  background: rgb(105, 0, 0);
+  background: radial-gradient(
+    circle,
+    rgba(105, 0, 0, 0.7553396358543417) 27%,
+    rgba(184, 179, 47, 1) 90%
+  );
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: black;
+  padding: 0 30px 0 30px;
+}
+
+.navbar-expand-lg {
+  background: lightblue;
+}
+
+.carousel {
+  position: relative;
+  width: 800px;
+  margin: 0 auto;
+  padding-top: 100px;
+}
+
+.image-container {
+  filter: brightness(80);
+}
+
+p {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  color: black;
+}
