@@ -3,30 +3,34 @@ import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 import React, { Component } from "react";
 import "./style.css";
+import { device } from "./mediaquery";
 
 const NewsContainer = styled.div`
-  width: 80%;
-  margin: 0 auto;
+  width: 100%;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(1fr);
   align-items: center;
+  justify-content: center;
   background: transparent;
-
   overflow: hidden;
-  padding-bottom: 200px;
-  padding-top: 50px;
+  padding: 50px 200px;
+  grid-gap: 2em;
 
-  @media only screen and (max-width: 600px) {
+  @media ${device.tablet} {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media ${device.desktop} {
+    grid-template-columns: repeat(4, 1fr);
   }
 `;
 
 const MainContainer = styled.div`
   width: 100%;
-
+  padding-top: 50px;
   h1 {
     text-align: center;
-    font-size: 3.5em;
+    font-size: 4em;
   }
 `;
 
@@ -76,7 +80,7 @@ class News extends Component {
         <h1>News</h1>
         <NewsContainer>
           {kevesebb.map(({ title, media }) => (
-            <Card style={{ width: "18rem" }}>
+            <Card style={{ width: "19rem" }}>
               {media ? <Card.Img variant="bottom" src={media} /> : <Keppotlo />}
 
               <Card.Body>
