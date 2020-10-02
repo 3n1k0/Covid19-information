@@ -1,16 +1,38 @@
 import styled from "styled-components";
 import Card from "react-bootstrap/Card";
-import Button from "react-bootstrap/Card";
+import Button from "react-bootstrap/Button";
 import React, { Component } from "react";
 import "./style.css";
 
-const MainContainer = styled.div`
-  width: 60%;
+const NewsContainer = styled.div`
+  width: 80%;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(4, 1fr);
   align-items: center;
-  background: papayawhip;
+  background: transparent;
+
+  overflow: hidden;
+  padding-bottom: 200px;
+  padding-top: 50px;
+
+  @media only screen and (max-width: 600px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+`;
+
+const MainContainer = styled.div`
+  width: 100%;
+
+  h1 {
+    text-align: center;
+    font-size: 3.5em;
+  }
+`;
+
+const Keppotlo = styled.div`
+  height: 200px;
+  background: url("https://www.wilmod.nl/wp-content/uploads/2020/03/Wilmod-Kuwatec-Corona-Virus.jpg");
 `;
 
 class News extends Component {
@@ -47,19 +69,23 @@ class News extends Component {
   }
 
   render() {
+    const kevesebb = this.state.articles.slice(0, 8);
+
     return (
       <MainContainer>
-        {this.state.articles.map(({ title, summary, media }) => (
-          <Card style={{ width: "18rem" }}>
-            <Card.Img variant="top" src={media} />
-            if
-            <Card.Body>
-              <Card.Title>{title}</Card.Title>
-              <Card.Text>{summary}</Card.Text>
-              <Button variant="primary">Go somewhere</Button>
-            </Card.Body>
-          </Card>
-        ))}
+        <h1>News</h1>
+        <NewsContainer>
+          {kevesebb.map(({ title, media }) => (
+            <Card style={{ width: "18rem" }}>
+              {media ? <Card.Img variant="bottom" src={media} /> : <Keppotlo />}
+
+              <Card.Body>
+                <Card.Title>{title}</Card.Title>
+                <Button variant="primary">Read</Button>
+              </Card.Body>
+            </Card>
+          ))}
+        </NewsContainer>
       </MainContainer>
     );
   }

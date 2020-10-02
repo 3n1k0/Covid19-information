@@ -4,20 +4,21 @@ body {
   text-decoration: none;
   color: papayawhip;
   background: rgb(105, 0, 0);
+  background: rgb(105, 0, 0);
   background: radial-gradient(
     circle,
     rgba(105, 0, 0, 0.7553396358543417) 27%,
-    rgba(184, 179, 47, 1) 90%
+    rgba(255, 250, 121, 1) 90%
   );
 }
 
 .navbar-light .navbar-nav .nav-link {
-  color: black;
+  color: white;
   padding: 0 30px 0 30px;
 }
 
 .navbar-expand-lg {
-  background: lightblue;
+  background: rgba(0, 0, 0, 0.9);
 }
 
 .carousel {
@@ -37,4 +38,29 @@ p {
   -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
   color: black;
+}
+
+.card-title {
+  color: black;
+  text-align: center;
+  font-weight: 600;
+}
+
+.card-body {
+  display: grid;
+  justify-content: center;
+}
+
+.card {
+  height: 400px;
+  display: grid;
+}
+
+.card-img-bottom {
+  max-height: 200px;
+  min-height: 200px;
+}
+
+.navbar .navbar-brand {
+  color: white;
 }
