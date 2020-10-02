@@ -34,7 +34,7 @@ class Stats extends Component {
   }
 
   render() {
-    console.log("ez", this.state);
+    console.log(this.state);
     const { critical, confirmed, deaths, recovered, lastUpdate } = this.state;
     return (
       <MainContainer>
