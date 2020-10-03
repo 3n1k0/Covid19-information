@@ -39,7 +39,9 @@ const MainContainer = styled.div`
 
 const Keppotlo = styled.div`
   height: 200px;
-  background: url("https://www.wilmod.nl/wp-content/uploads/2020/03/Wilmod-Kuwatec-Corona-Virus.jpg");
+  background: url(${({ index }) => {
+    return Helyettesitokepek[index % Helyettesitokepek.length];
+  }});
 `;
 
 class News extends Component {
@@ -82,9 +84,13 @@ class News extends Component {
       <MainContainer>
         <h1>News</h1>
         <NewsContainer>
-          {kevesebb.map(({ title, media, link }) => (
+          {kevesebb.map(({ title, media, link }, index) => (
             <Card style={{ width: "19rem" }}>
-              {media ? <Card.Img variant="bottom" src={media} /> : <Keppotlo />}
+              {media ? (
+                <Card.Img variant="bottom" src={media} />
+              ) : (
+                <Keppotlo index={index} />
+              )}
 
               <Card.Body>
                 <Card.Title>{title}</Card.Title>
