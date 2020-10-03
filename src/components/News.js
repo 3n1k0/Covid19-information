@@ -5,6 +5,13 @@ import React, { Component } from "react";
 import "./style.css";
 import { device } from "./mediaquery";
 
+const Helyettesitokepek = [
+  "https://up-magazine.info/wp-content/uploads/2019/10/virus-grippe.jpg",
+  "https://images.theconversation.com/files/352606/original/file-20200812-14-8pkt2r.jpg?ixlib=rb-1.1.0&rect=0%2C0%2C10210%2C4852&q=45&auto=format&w=496&fit=clip",
+  "https://ichef.bbci.co.uk/news/410/cpsprodpb/13E61/production/_110450518_gettyimages-600999610.jpg",
+  "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQCghTFSBs0P24mrz4BDmpXHzW3HUELfT16Qg&usqp=CAU",
+];
+
 const NewsContainer = styled.div`
   width: 100%;
   display: grid;
@@ -75,13 +82,17 @@ class News extends Component {
       <MainContainer>
         <h1>News</h1>
         <NewsContainer>
-          {kevesebb.map(({ title, media }) => (
+          {kevesebb.map(({ title, media, link }) => (
             <Card style={{ width: "19rem" }}>
               {media ? <Card.Img variant="bottom" src={media} /> : <Keppotlo />}
 
               <Card.Body>
                 <Card.Title>{title}</Card.Title>
-                <Button variant="primary">Read</Button>
+                <Button variant="primary">
+                  <a target="_blank" href={link}>
+                    Read on website
+                  </a>
+                </Button>
               </Card.Body>
             </Card>
           ))}
