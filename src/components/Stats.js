@@ -19,7 +19,7 @@ class Stats extends Component {
 
   async componentDidMount() {
     const response = await fetch(
-      "https://covid-19-data.p.rapidapi.com/totals?format=json",
+      "https://covid-19-data.p.rapidapi.com/report/totals?date-format=YYYY-MM-DD&format=json&date=2020-07-21",
       {
         method: "GET",
         headers: {
@@ -35,14 +35,25 @@ class Stats extends Component {
 
   render() {
     console.log(this.state);
-    const { critical, confirmed, deaths, recovered, lastUpdate } = this.state;
+    const { critical, confirmed, deaths, recovered, date } = this.state;
     return (
       <MainContainer>
-        <h1>{critical}</h1>
-        <h1>{confirmed}</h1>
-        <h1>{deaths}</h1>
-        <h1>{recovered}</h1>
-        <h1>{lastUpdate}</h1>
+        <h1>Numbers from all over the world</h1>
+        <p>
+          Critical cases: <b>{critical}</b>
+        </p>
+        <p>
+          Confirmed cases: <b>{confirmed}</b>
+        </p>
+        <p>
+          Deaths: <b>{deaths}</b>
+        </p>
+        <p>
+          Recovered: <b>{recovered}</b>
+        </p>
+        <p>
+          Last update: <b>{date}</b>
+        </p>
       </MainContainer>
     );
   }
