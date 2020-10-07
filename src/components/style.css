@@ -3,13 +3,7 @@ body {
   font-family: "Raleway";
   text-decoration: none;
   color: papayawhip;
-  background: rgb(105, 0, 0);
-  background: rgb(105, 0, 0);
-  background: radial-gradient(
-    circle,
-    rgba(105, 0, 0, 0.7553396358543417) 27%,
-    rgba(255, 250, 121, 1) 90%
-  );
+  background: #00587a;
 }
 
 .navbar-light .navbar-nav .nav-link {
@@ -18,7 +12,7 @@ body {
 }
 
 .navbar-expand-lg {
-  background: rgba(0, 0, 0, 0.9);
+  background: #00587a;
 }
 
 .carousel {
@@ -44,6 +38,11 @@ p {
   color: black;
   text-align: center;
   font-weight: 600;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  margin-bottom: 2rem;
 }
 
 .card-body {

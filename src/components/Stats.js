@@ -4,8 +4,34 @@ import "./style.css";
 import { device } from "./mediaquery";
 
 const MainContainer = styled.div`
-  width: 100%;
+  padding-bottom: 100px;
   padding-top: 50px;
+  background: #008891;
+
+  h1 {
+    padding-bottom: 50px;
+  }
+`;
+
+const InfoContainer = styled.div`
+  width: 100%;
+  font-family: "Open Sans";
+  background: white;
+
+  height: 500px;
+  max-width: 500px;
+  position: relative;
+  margin: 0 auto;
+  border-radius: 20%;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.8;
+  padding: 20px;
+
+  p {
+    font-size: 2em;
+  }
 `;
 
 class Stats extends Component {
@@ -39,21 +65,20 @@ class Stats extends Component {
     return (
       <MainContainer>
         <h1>Numbers from all over the world</h1>
-        <p>
-          Critical cases: <b>{critical}</b>
-        </p>
-        <p>
-          Confirmed cases: <b>{confirmed}</b>
-        </p>
-        <p>
-          Deaths: <b>{deaths}</b>
-        </p>
-        <p>
-          Recovered: <b>{recovered}</b>
-        </p>
-        <p>
-          Last update: <b>{date}</b>
-        </p>
+        <InfoContainer>
+          <p>
+            Critical cases: <b>{critical}</b>
+          </p>
+          <p>
+            Confirmed cases: <b>{confirmed}</b>
+          </p>
+          <p>
+            Deaths: <b>{deaths}</b>
+          </p>
+          <p>
+            Recovered: <b>{recovered}</b>
+          </p>
+        </InfoContainer>
       </MainContainer>
     );
   }

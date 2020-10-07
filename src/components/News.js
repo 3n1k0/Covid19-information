@@ -35,6 +35,7 @@ const NewsContainer = styled.div`
 const MainContainer = styled.div`
   width: 100%;
   padding-top: 50px;
+  background: #00587a;
 `;
 
 const Keppotlo = styled.div`
