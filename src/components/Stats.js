@@ -4,12 +4,16 @@ import "./style.css";
 import { device } from "./mediaquery";
 
 const MainContainer = styled.div`
-  padding-bottom: 100px;
-  padding-top: 50px;
+  padding: 50px 50px 100px 50px;
   background: #008891;
 
   h1 {
     padding-bottom: 50px;
+    font-size: 2em;
+
+    @media ${device.desktop} {
+      font-size: 3em;
+    }
   }
 `;
 
@@ -17,9 +21,8 @@ const InfoContainer = styled.div`
   width: 100%;
   font-family: "Open Sans";
   background: white;
-
-  height: 500px;
-  max-width: 500px;
+  height: 400px;
+  max-width: 400px;
   position: relative;
   margin: 0 auto;
   border-radius: 20%;
@@ -30,7 +33,16 @@ const InfoContainer = styled.div`
   padding: 20px;
 
   p {
-    font-size: 2em;
+    font-size: 1.5em;
+  }
+
+  @media ${device.desktop} {
+    height: 500px;
+    max-width: 500px;
+
+    p {
+      font-size: 2em;
+    }
   }
 `;
 

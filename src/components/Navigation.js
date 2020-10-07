@@ -13,7 +13,7 @@ const Navigation = () => (
         <Nav className="mr-auto">
           <Nav.Link href="#home">Home</Nav.Link>
           <Nav.Link href="#news">News</Nav.Link>
-          <Nav.Link href="#links">Resources</Nav.Link>
+          <Nav.Link href="#resources">Resources</Nav.Link>
         </Nav>
       </Navbar.Collapse>
     </Navbar>

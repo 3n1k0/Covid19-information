@@ -83,18 +83,23 @@ class News extends Component {
 
     return (
       <MainContainer>
+        <a name="news"></a>
         <h1>News</h1>
         <NewsContainer>
           {kevesebb.map(({ title, media, link }, index) => (
             <Card style={{ width: "19rem" }}>
               {media ? (
-                <Card.Img variant="bottom" src={media} />
+                <a href={link} target="_blank">
+                  <Card.Img variant="bottom" src={media} />
+                </a>
               ) : (
                 <Keppotlo index={index} />
               )}
 
               <Card.Body>
-                <Card.Title>{title}</Card.Title>
+                <a href={link} target="_blank">
+                  <Card.Title>{title}</Card.Title>
+                </a>
                 <Button variant="primary">
                   <a target="_blank" href={link}>
                     Read on website
