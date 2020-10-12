@@ -2,6 +2,7 @@ import styled from "styled-components";
 import React, { Component } from "react";
 import "./style.css";
 import { device } from "./mediaquery";
+import AnimatedDashboard from "./AnimatedDashboard";
 
 const MainContainer = styled.div`
   padding: 50px 50px 100px 50px;
@@ -77,6 +78,7 @@ class Stats extends Component {
     return (
       <MainContainer>
         <h1>Numbers from all over the world</h1>
+        <AnimatedDashboard />
         <InfoContainer>
           <p>
             Critical cases: <b>{critical}</b>
